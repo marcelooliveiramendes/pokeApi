@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;800&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .PokemonsContent{
@@ -10,4 +13,25 @@
     grid-template-columns: repeat(auto-fill, minmax(calc(350px - 30px), 1fr));
     padding: 20px;
     grid-gap: 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(25,25,170,1) 100%);
+}
+
+.PokemonsContent div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 350px;
+  border-radius: 5px;
+
+}
+.PokemonsContent div img{
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.PokemonsContent div h1{
+  text-transform: capitalize;
 }
