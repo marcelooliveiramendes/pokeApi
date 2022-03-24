@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
+import Pokemon from './components/Pokemon';
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -27,10 +28,7 @@ function App() {
     <div className="App">
       {pokemons.length !== 0 &&(
         pokemons.map(pokemon => (
-          <div key={pokemon.name}>
-            <p>{pokemon.name}</p>
-            <p>{pokemon.url}</p>
-          </div>
+          <Pokemon key={pokemon.name} props={pokemon}/>
         ))
       )}
     </div>
